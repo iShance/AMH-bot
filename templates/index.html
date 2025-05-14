@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="main-content">
+        <div class="chatbot-icon" onclick="toggleChat()">
+            <img src="static/images/botlogo.gif" alt="Chatbot Icon">
+        </div>
+    </div>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <h2>AMH Bot</h2>
+            <span class="close-btn" onclick="toggleChat()">X</span>
+        </div>
+        <div class="chat-body" id="chat-box">
+            <div class="welcome-message">
+                Welcome to Psychiatrist, a safe and supportive space where you can share your thoughts and feelings without fear of judgment.
+            </div>
+        </div>
+        <div class="chat-footer">
+            <select id="language-select" class="language-select">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="ar">Arabic</option>
+            </select>
+            <div class="quick-replies">
+                <button class="quick-btn" onclick="quickReply('Hi')">Hi</button>
+                <button class="quick-btn" onclick="quickReply('Who are you?')">Who are you?</button>
+                <button class="quick-btn" onclick="quickReply('I need help')">I need help</button>
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">&#9658;</button>
+        </div>
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+</html>
